@@ -1,0 +1,725 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+
+
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --main: rgb(32, 32, 124);
+    --secondshade:rgb(203, 232, 241);
+    --gray: rgb(112, 110, 110);
+    --orange: orange;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding-right: 20px ;
+    height: 100px ;
+    border-bottom: 1px solid var(--main);
+    box-shadow: 1px 1px 1px 1px grey;
+    overflow-y: hidden;
+    /* position: fixed; */
+    /* z-index: 2; */
+}
+
+.logo{
+    width: 21%;
+
+}
+/* #logo{
+    width: 20vm;
+    min-width:50px;
+   max-width: 150px;
+    image-rendering: crisp-edges;
+} */
+
+.logoh{
+    color: var(--main);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+/* .logo, .logoh {
+    display: flex;
+    
+} */
+
+.imlo{
+    display: flex;
+    align-items: center;
+    
+    gap: px;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 0.7rempx;
+    color: var(--main);
+    font-family: sans-serif;
+    font-weight: 700;
+
+}
+
+.icon {
+    font-size: 50px;
+    color: var(--main);
+    /* padding-right: 10px; */
+    display: none;
+}
+
+ /* my sliding image */
+/* Carousel container takes up the full screen */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* z-index: -1; */
+    
+}
+
+/* Carousel images in a row */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+/* Each slide takes up the full width and height of the viewport */
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+/* Ensure images fill the entire slide area without stretching */
+.carousel-images img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+   /* Scales image to fill, maintaining aspect ratio */
+}
+
+/* Full-size overlay with centered text */
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    /* text-align: center; */
+    padding: 20%;
+    box-sizing: border-box;
+    padding-left:30px ;
+}
+
+/* .carousel-caption h2,
+.carousel-caption p {
+    margin: 0;
+    padding: 0;
+} */
+
+.carousel-caption h2{
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-bottom: 1rem;
+    color: rgb(182, 182, 230);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#readmore{
+    display: flex;
+    margin-top: 30px;
+    gap: 7px;
+    /* text-align: left; */
+    
+}
+
+.readmore{
+    padding: 13px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    
+
+}
+
+.readmore a {
+    text-decoration: none
+    
+}
+
+
+.readmore-first{
+    background-color: var(--orange);
+    color: #fff;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* cards */
+
+.card{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr ;
+    margin-bottom: 2rem;
+
+}
+
+.cards {
+    /* border: 1px solid; */
+    text-align: center;
+    background-color: var(--secondshade);
+    margin: 15px;
+    margin-bottom: 1.2rem;
+    /* border-radius: 20px; */
+    overflow-y: hidden;
+    transition: .2s;
+    transition: 300ms ease-in;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+}
+.cards:hover {
+    background-color: var(--orange);
+    /* color: #fff; */
+    transform: rotate(-4deg);
+}
+/* .card:hover ~ .cards{
+    z-index: 1;
+    transform: translate(60px);
+} */
+
+.card-icons {
+    color: var(--main);
+    font-size: 36px;
+    /* font-size: 3rem; */
+    padding-top: 1.5rem; 
+    overflow: hidden;
+}
+.card-icons:hover, .cards h2:hover, .card .cards p:hover {
+    color: #fff;
+}
+
+.cards h2{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: sans-serif;
+    /* color: var(--gray); */
+}
+
+.card .cards p {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--gray);
+}
+
+/* .line::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 3px solid --main;
+    width: 60%;
+    
+} */
+
+
+/* about us */
+.line{
+    width: 35px;
+    height: 4px;
+    background-color:var(--orange);
+    display: grid;
+    margin-bottom: 5px;
+}
+
+.line2{
+    width: 65px; 
+}
+
+
+.two{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.two > .twospan {
+    margin-left: 20px;
+    margin-top: 5px;
+} 
+
+.about {
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+.about-image{
+    width: 100%;
+    padding-bottom: 1.7rem;
+}
+
+.about-image img{
+    width: 100%;
+}
+
+.about h2{
+    color: var(--main);
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about p{
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* gallery */
+
+.facilities{
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    
+}
+
+
+.gallery{
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow-x: hidden;
+    
+}
+
+
+.gallery .two{
+    
+    text-align: center!important;
+    margin-top: 3rem;
+    color:var(--main);
+    margin-bottom: 2rem;
+    
+    
+}
+
+
+
+.gallery .two h2{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    
+}
+
+.facilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 16px; /* Space between items */
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+
+#facilites-container {
+    position: relative; /* Create positioning context */
+    overflow: hidden; /* Hide overflow for clean edges */
+    border: 2px solid #ddd; /* Optional: Adds a border to images */
+    border-radius: 8px; /* Optional: Rounded corners */
+    z-index: -1;
+}
+
+.facilities-img {
+    width: 100%;
+    height: 100%;
+    display: block; /* Ensure proper scaling of the images */
+    object-fit: cover;
+}
+
+.facilities p {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px; /* Optional: Rounded corners */
+    max-width: 80%; /* Ensure text doesn't overflow */
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+
+/* .facilities-img{
+    width: 100%;
+    position: absolute;
+}
+
+#facilities-container{
+    border: 2px solid black;
+    width: 10%;
+} */
+
+
+/* .facilities p {
+    border: 1px solid black;
+    width: 13rem;
+    text-align: center;
+    padding: 0.9rem 0.9rem;
+    font-size: 1.4rem;
+    background-color: var(--orange);
+    color: #fff;
+    font-weight: 700;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 20%;
+    right: 0;
+    bottom:0px;
+    top: 50px;
+    left: 176px;
+    box-shadow: 0 0 0 0.15;
+} */
+
+
+/* quicklinks */
+
+.footer-section{
+    background-image: url(/winsschool/bluebackground3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 1.5rem;
+    margin-top: 4rem;
+    /* display: flex; */
+}
+
+.footer-section h2{
+    color: #fff;
+    margin-bottom: 1rem;
+    padding-top: 3rem;
+}
+
+
+.icon-text {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    margin-bottom: 0.6rem;
+
+}
+
+.icon-text i{
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+}
+
+
+
+.icon-text a{
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    
+}
+
+.contact-icon{
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+
+}
+
+.contact-icon i{
+    color: var(--orange);
+}
+
+.contact-icon p{
+    color: #fff;
+    font-family: sans-serif;
+    
+}
+
+.brands {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.brands i {
+    margin-right: 0.2rem;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--main);
+    
+}
+
+
+/* footer */
+footer{
+    display: flex;
+    margin-top: 3rem;
+    color: #fff;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+.rightsreserved, footer i{
+    color: grey;
+}
+
+
+/* scroll Arrow */
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main);
+    border-radius: 50%;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top i{
+    color: #fff;
+    font-size: 1.7rem;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+background-color: var(--orange);
+}
+
+.back-to-top:hover i{
+    transform: translateY(-4px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 900px){
+     ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #fff;
+        text-align: center;
+        gap: 0;
+        overflow: hidden;
+        
+    }
+   .ul {
+        transition: all, 0.7s;
+   }
+
+    ul li {
+        padding: 20px;
+
+    }
+
+    ul li a {
+        color:var(--main);
+        font-family: sans-serif;
+        
+    }
+
+   .icon {
+    display: block;
+   }  
+
+
+   #logo{
+       width: 100%;
+   }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .facilities p {
+        font-size: 1.2rem; /* Adjust text size for smaller screens */
+        padding: 8px;
+    }
+}
+
+
+@media only screen and (min-width: 700px){
+
+    .card {
+    
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       }
+   
+       .logo{
+           width: 35%;
+           
+           /* margin-left: px;  */
+           /* height:px; */
+       
+       }
+       #logo{
+           width: 25vm;
+           min-width:50px;
+           /* height: 125px; */
+          max-width: 150px;
+           image-rendering: crisp-edges;
+       }
+   
+
+       .footer-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 3%;
+       }
+
+       footer{
+        padding-bottom: 1rem;
+        margin-top: 2rem;
+       }
+}
+
+
+
+
+@media only screen and (min-width: 968px){
+    .card {
+    
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     padding: 0% 7% ;
+    }
+
+    .cards{
+        padding: 5%;
+    }
+
+
+
+    .logo{
+        width: 35%;
+        
+        /* margin-left: px;  */
+        /* height:px; */
+    
+    }
+    #logo{
+        width: 25vm;
+        min-width:50px;
+        /* height: 125px; */
+       max-width: 150px;
+        image-rendering: crisp-edges;
+    }
+
+    .carousel-caption{
+        padding-right: 30%;
+    }
+
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0% 3% ;
+        gap: 4%;
+    }
+
+    .gallery {
+        padding: 0% 2% ;
+    }
+    
+
+}
+

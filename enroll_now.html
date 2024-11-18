@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="enroll.css">
+</head>
+<body>
+    <!-- nav -->
+
+    <nav>
+        <div class="imlo">
+          <div class="logo">
+            <img src="/winsschool/winschool.png" alt="lululogo" id="logo" />
+          </div>
+          <h1 class="logoh">THE WINS SCHOOL</h1>
+        </div>
+  
+        <div class="nav-list">
+          <ul id="nav-list-items">
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">Portal</a></li>
+          </ul>
+        </div>
+  
+        <div class="icon">
+          <i class="fa-solid fa-bars" onclick="toggle()"></i>
+        </div>
+      </nav>
+
+
+      <section class="image-card">
+        <div class="texts">
+            <h2>Admission</h2>
+            <p>We are pleased that you want to enroll your child in The Wins School. You have made the right choice. We have ensured that our admission processes are easy and seamless. Please follow the steps below to complete your child's enrollment.</p>
+
+            <div class="buttons">
+                <button class="Application-btn">Download Application Form</button>
+                <button class="normal-btn">Apply Online</button>
+            </div>
+                <button class="Application-btn">Take Entrance Examination</button>
+        </div>
+      </section>
+
+       <!-- scroll arrow -->
+
+    <a href="#" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+        let menu = document.getElementById("nav-list-items");
+        menu.style.maxHeight = "0px";
+  
+        function toggle() {
+          if (menu.style.maxHeight == "0px") {
+            menu.style.maxHeight = "300px";
+          } else {
+            menu.style.maxHeight = "0px";
+          }
+        }
+      </script>
+
+    <script
+        src="https://kit.fontawesome.com/9914104bee.js"
+        crossorigin="anonymous"
+    ></script>
+
+</body>
+</html>
