@@ -5,8 +5,6 @@
     /* overflow-x: hidden; */
 }
 
-
-
 body{
     overflow-x: hidden;
     background-image: url(/winsschool/IMG_5373.JPG);
@@ -44,14 +42,11 @@ nav{
 
 }
 
-
 .logoh{
     color: var(--main);
     font-family: sans-serif;
     text-align: center;
 }
-
-
 
 .imlo{
     display: flex;
@@ -143,8 +138,6 @@ nav{
     z-index: 1500;
 }
 
-
-
 /* Show Dropdown When Active */
 .dropdown.active .dropdown-content {
     display: block;
@@ -156,12 +149,7 @@ nav{
     display: none;
 }
  
-
-
-
 /* portal */
-
-
 .line{
     width: 35px;
     height: 4px;
@@ -173,7 +161,6 @@ nav{
 .line2{
     width: 65px; 
 }
-
 
 .two{
     display: flex;
@@ -201,13 +188,6 @@ nav{
 
 }
 
-.student-login{
-    margin-top: 2rem;
-    /* border: 1px solid black; */
-    /* box-shadow: rgba(0, 0, 0, 0.15); */
-    /* margin: 2rem; */
-}
-
 .student-login h3{
     font-size: 2rem;
     font-family: serif;
@@ -217,6 +197,10 @@ nav{
 .form-heading {
     text-align: center;
 
+}
+
+.student-login ul{
+    margin-right: 2rem;
 }
 
 .student-login li{
@@ -239,6 +223,29 @@ nav{
     margin-bottom: 2rem;
 }
 
+.input-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto 1.5rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+    cursor: pointer;
+}
+
 .portal form{
     /* box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5); */
     padding-bottom: 0.2rem;
@@ -246,9 +253,11 @@ nav{
 }
 
 .portal{
-    margin-bottom: 6rem;
+    margin-bottom: rem;
     box-shadow: 1px 2px 2px 2px rgba(32,32,124, 0.18);
     background-color: #fff;
+    border-radius: 1.7rem;
+    padding: 2rem 2rem;
 }
 
 .form-selection{
@@ -260,30 +269,67 @@ nav{
 
 .form-selection h3{
     font-size: 1.4rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
 }
 
 .student {
     color: var(--main);
     font-weight: 900;
-    border-bottom: 2px solid var(--orange);
+    font:  sans-serif;
+    /* font-size: 5.3rem; */
+    /* border-bottom: 2px solid var(--orange); */
 }
 
-
-
-
-.form-group input{
+/* .form-group input{
     width: 80%;
     padding: 1rem;
-    /* border-radius: 2rem; */
+    border-radius: 2rem;
     font-size: 1rem;
     font-family: sans-serif;
     margin-bottom: 1.5rem;
-    /* box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2); */
-    /* background-color: rgb(243, 242, 242); */
+    background-color: rgb(243, 242, 242);
     border: none;
-    border-bottom: 1px solid var(--main);
     outline: none;
+} */
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    background-color: rgb(243, 242, 242);
+    border: 2px solid transparent;
+    outline: none;
+    transition: border-color 0.3s, padding-top 0.3s;
+}
+
+.form-group input:focus {
+    border-color: rgb(32, 32, 124);
+    padding-top: 1.5rem;
+}
+
+.form-group label {
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--gray);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    color: rgb(32, 32, 124);
+}
+
+.form-group input::placeholder {
+    color: transparent;
 }
 
 .form-group button{
@@ -301,9 +347,7 @@ nav{
 
 }
 
-
 /* scroll Arrow */
-
 .back-to-top{
     position: fixed;
     bottom: 2rem;
@@ -336,22 +380,7 @@ background-color: var(--orange);
     transform: translateY(-4px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* mediaqueries */
-
-
 @media only screen and (max-width: 900px){
     #nav-list-items {
        position: absolute;
@@ -387,14 +416,16 @@ background-color: var(--orange);
   #logo{
       width: 5rem;
   }
+
+  .dropdown-content {
+    left: auto; /* Remove left alignment */
+    right: 5rem; /* Align dropdown to the right */
+}
    
 }
 
 
-@media only screen and (min-width: 700px){
-
-   
-       
+@media only screen and (min-width: 700px){  
        
        #logo{
            /* width: 20vh; */
@@ -415,8 +446,6 @@ background-color: var(--orange);
 
      
 }
-
-
 
 @media only screen and (min-width: 968px){
    
