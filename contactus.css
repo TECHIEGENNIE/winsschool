@@ -9,6 +9,7 @@
 
 body{
     overflow-x: hidden;
+    /* background-color: rgb(247, 243, 236); */
 }
 
 :root{
@@ -26,8 +27,8 @@ nav{
     background-color: #fff;
     padding-right: 20px ;
     height: 80px ;
-    box-shadow: 0 0 1px 1px rgba(32,32,124, 0.18);
-    cursor: pointer;
+    /* border-bottom: 1px solid var(--main); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* overflow-y: hidden; */
     /* position: fixed; */
     z-index: 1000;
@@ -36,7 +37,6 @@ nav{
 .logo{
     display: flex;
     align-items: center;
-
 
 }
 /* #logo{
@@ -62,12 +62,12 @@ nav{
     display: flex;
     align-items: center;
     
-    
+    gap: px;
 }
 
 ul {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
     z-index: 1001;
 
@@ -84,13 +84,11 @@ ul li a{
     font-family: sans-serif;
     font-weight: 700;
     transition: color 0.3s ease;
-
 }
 
 #nav-list-items li a:hover {
     color: var(--orange);
 }
-
 
 /* Dropdown Styles */
 .dropdown {
@@ -165,7 +163,10 @@ ul li a{
     display: none;
 }
 
-/* imagecard */
+
+
+
+
 
 .image-card{
     min-height: 100vh;
@@ -192,14 +193,14 @@ ul li a{
 
 .texts{
     position: relative;
-    /* text-align: right; */
-    font-family: sans-serif;
+    text-align: center;
+    font-family: serif;
     padding: 20px;
 }
 
 
 .texts h2{
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--secondshade);
     margin-bottom: 2rem;
 }
@@ -207,211 +208,125 @@ ul li a{
 .texts p{
     color: #fff;
     width: 90%;
-    font-size: 1.2rem;
-    font-family: sans-serif;
-
-}
-
-/* admission buttons */
-
-.buttons{
-    margin-top: 3rem;
-
-}
-
-.Application-btn{
-    padding: 1rem;
-    background-color: var(--orange);
-    border: none;
-    margin-bottom: 1px;
-    color: #fff;
-    font-size: 1rem;
-    font-family: sans-serif;
-    font-weight: 700;
-}
-
-.normal-btn{
-    padding: 1rem;
-    background-color: #fff;
-    border: none;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: sans-serif;
-}
-
-/* admission */
-
-
-.line{
-    width: 35px;
-    height: 4px;
-    background-color:var(--orange);
-    display: grid;
-    margin-bottom: 5px;
-}
-
-.line2{
-    width: 65px; 
-}
-
-
-.two{
-    display: flex;
-    margin-top: 5px;
-    margin-bottom: 1rem;
-    align-items: center;
-}
-
-.two > .twospan {
-    margin-left: 20px;
-    margin-top: 5px;
-} 
-
-.about {
-    margin-left: 5%;
-    margin-right: 5%;
-    
-}
-
- .two{
-    color: var(--main);
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 2rem;
-
-}
-
-.admission{
-    /* display: flex; */
-    margin-top: 4rem;
-    padding: 2rem;
-}
-
-.admission img{
-    width: 100%;
-}
-
-.admission-card {
-    margin-top: -35px;
-}
-
-.heading{
     font-size: 2rem;
     font-family: sans-serif;
-    color: rgb(25, 25, 43);
-    margin-bottom: 1rem;
 
 }
 
-.admission p, ol{
-    font-size: 1.1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(73, 72, 72);
-}
-.admission span{
-    color: var(--main);
+
+.highlight {
+    color: var(--orange);
+    font-weight: bold;
 }
 
-.admission ol{
-    margin-left: 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.admission button{
-    margin-top: 1rem;
-}
-
-
-
-
-/* scroll arrow */
-html{
-    scroll-behavior: smooth;
-}
-
-.back-to-top{
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--main);
-    border-radius: 50%;
-    padding: 0.5rem;
-    text-decoration: none;
-    transition: 0.2s ease-out;
-}
-
-.back-to-top.show {
-    display: inline-flex;
- }
-
-.back-to-top i{
-    color: #fff;
-    font-size: 1.7rem;
-    transition: 0.2s ease-out;
-}
-
-.back-to-top:hover {
-background-color: var(--orange);
-}
-
-.back-to-top:hover i{
-    transform: translateY(-4px);
-}
-
-.exam{
+/* General Contact Us Styles */
+.contact-us {
+    padding: 2rem 5%;
+    font-family: 'Arial', sans-serif;
     background-color: var(--secondshade);
-    margin: 2rem;
-    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Contact Details Section */
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
+    margin-top: 3rem;
 }
 
-.exam-card i{
-   color: var(--main);
-   font-size: 2.5rem; 
+.detail-item {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    background-color: var(--secondshade);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.exam-card h2{
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    font-family: sans-serif;
+.detail-item i {
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
 }
 
-.exam-card p{
-    margin-top: 1.2rem;
-    font-size: 1.2rem;
-    padding-bottom: 1.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.detail-item h3 {
+    color: var(--main);
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    font-size: 1rem;
     color: var(--gray);
 }
 
-/* EXAM INPUT */
+/* Contact Form Section */
+.contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    background-color: var(--secondshade);
+}
 
-.exam-input{
-    width: 70%;
-    height: 3rem;
+.contact-form h2 {
+    font-size: 1.6rem;
+    font-family: poppins;
+    text-align: center;
+    color: var(--main);
+    margin-bottom: 1.5rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--main);
+    border-radius: 5px;
     font-size: 1rem;
-    font-family: serif;
-    font-size: 1.5rem;
     border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+
 }
 
-.exam-form{
-    position: relative;
-}
-
-.exam-form button{
-    padding: 0.4rem;
+.contact-form button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
     background-color: var(--main);
     color: #fff;
-    position: absolute;
-    right: 4rem;
-    top: 0.08rem;
-    width: 20%;
-    
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--orange);
+}
+
+/* Map Section */
+.contact-map {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-map h2 {
+    color: var(--main);
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+    font-size: 2rem;
 }
 
 
@@ -422,7 +337,13 @@ background-color: var(--orange);
 
 
 
-/* footer */
+
+
+
+
+
+/* quicklinks */
+
 .footer-section{
     background-image: url(/winsschool/bluebackground3.jpg);
     background-repeat: no-repeat;
@@ -453,6 +374,8 @@ background-color: var(--orange);
     font-size: 0.8rem;
     font-family: sans-serif;
 }
+
+
 
 
 
@@ -495,34 +418,7 @@ background-color: var(--orange);
     
 }
 
-/* news */
-/* .exam-input{
-    width: 70%;
-    height: 3rem;
-    font-size: 1rem;
-    font-family: serif;
-    font-size: 1.5rem;
-    border: none;
-}
 
-.exam-form{
-    position: relative;
-}
-
-.exam-form button{
-    padding: 0.4rem;
-    background-color: var(--main);
-    color: #fff;
-    position: absolute;
-    right: 4rem;
-    top: 0.08rem;
-    width: 20%;
-    
-} */
-
-
-
-/* footer */
 footer{
     display: flex;
     margin-top: 3rem;
@@ -543,6 +439,40 @@ footer a{
     color: grey;
 }
 
+
+/* scroll Arrow */
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main);
+    border-radius: 50%;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top.show {
+    display: inline-flex;
+ }
+
+.back-to-top i{
+    color: #fff;
+    font-size: 1.7rem;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+background-color: var(--orange);
+}
+
+.back-to-top:hover i{
+    transform: translateY(-4px);
+}
 
 
 
@@ -577,9 +507,7 @@ footer a{
        transition: all, 0.7s ease-out;
        
    }
-  .ul {
-       transition: all, 0.7s ease-out;
-  }
+ 
 
    ul li {
        padding: 20px;
@@ -601,29 +529,19 @@ footer a{
       width: 5rem;
   }
    
-  
-
 }
 
 
 @media only screen and (min-width: 700px){
 
    
+   
+     
        #logo{
-           /* width: 25vm; */
-           /* min-width:50px; */
-           /* height: 125px; */
-          /* max-width: 150px; */
+          
            image-rendering: crisp-edges;
        }
-   
 
-       .texts p{
-        width: 60%;
-       }
-
-     
-       /* footer */
        .footer-section{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -634,58 +552,33 @@ footer a{
         padding-bottom: 1rem;
         margin-top: 2rem;
        }
+   
+
+       .contact-details{
+        padding: 0 4rem;
+       }
+
+       .contact-form{
+        margin: 0 4rem;
+       }
+
+       .contact-map{
+        margin: 0 4rem;
+       }
+     
 }
 
 
 
 @media only screen and (min-width: 968px){
    
-    
+   
     #logo{
-        width: 5rem;
+        width: 7rem ;
         /* min-width:50px; */
         /* height: 125px; */
        max-width: 150px;
         image-rendering: crisp-edges;
     }
 
-    
-    
-    /* about */
-    
-    .admission{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2%;
-        margin: 0% 5%;
-        /* margin-top: 3%; */
-    }
-
-
-     /* exam input */
-
-  .exam-input{
-    width: 50%;
-    height: 3rem;
-    font-size: 1rem;
-    font-family: serif;
-    font-size: 1.5rem;
-    border: none;
 }
-
-.exam-form button{
-    
-    padding: 0.2rem;
-    right: 17rem;
-    top: 0.08rem;
-    width: 10%;
-    font-size: 1rem;
-    
-}
-
-.exam {
-    margin: 0% 7%;
-}
-
-}
-

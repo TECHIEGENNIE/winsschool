@@ -1,85 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="enroll.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enroll</title>
+    <link rel="stylesheet" href="enroll.css" />
+  </head>
+  <body>
     <!-- nav -->
 
     <nav>
-        <div class="imlo">
-          <div class="logo">
-            <img src="/winsschool/winschool.png" alt="lululogo" id="logo" />
-          </div>
+      <div class="imlo">
+        <div class="logo">
+          <img src="/winsschool/winschool.png" alt="lululogo" id="logo" />
           <h1 class="logoh">THE WINS SCHOOL</h1>
         </div>
-  
-        <div class="nav-list">
-          <ul id="nav-list-items">
-              <li><a href="">Home</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Contact Us</a></li>
-              <li><a href="">News</a></li>
-              <li><a href="">Portal</a></li>
-          </ul>
-        </div>
-  
-        <div class="icon">
-          <i class="fa-solid fa-bars" onclick="toggle()"></i>
-        </div>
-      </nav>
+      </div>
 
-
-      <section class="image-card">
-        <div class="texts">
-            <h2>Admission</h2>
-            <p>We are pleased that you want to enroll your child in The Wins School. You have made the right choice. We have ensured that our admission processes are easy and seamless. Please follow the steps below to complete your child's enrollment.</p>
-
-            <div class="buttons">
-                <button class="Application-btn">Download Application Form</button>
-                <button class="normal-btn">Apply Online</button>
+      <div class="nav-list">
+        <ul id="nav-list-items">
+          <li><a href="wins.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">
+                Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="./student_login.html">Student Login</a>
+                <a href="./staff_login.html">Staff Login</a>
             </div>
-                <button class="Application-btn">Take Entrance Examination</button>
-        </div>
-      </section>
+        </li>
+          <li><a href="">News</a></li>
+        </ul>
+      </div>
 
-       <!-- scroll arrow -->
+      <div class="icon">
+        <i class="fa-solid fa-bars" onclick="toggle()"></i>
+      </div>
+    </nav>
+
+    <section class="image-card">
+      <div class="texts">
+        <h2>Admission</h2>
+        <p>
+          We are pleased that you want to enroll your child in The Wins School.
+          You have made the right choice. We have ensured that our admission
+          processes are easy and seamless. Please follow the steps below to
+          complete your child's enrollment.
+        </p>
+
+        <div class="buttons">
+          <button class="Application-btn">Download Application Form</button>
+          <button class="normal-btn">Apply Online</button>
+        </div>
+        <button class="Application-btn">Take Entrance Examination</button>
+      </div>
+    </section>
+
+    <!-- scroll arrow -->
 
     <a href="#" class="back-to-top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- section for admission -->
+
+    <section class="admission">
+
+        <img src="/winsschool/IMG_4402 (1).JPG" alt="" />
+
+
+      <div class="admission-card">
+        <div class="two">
+          <h2>Admission</h2>
+          <div class="twospan">
+            <span class="line"></span>
+            <span class="line line2"></span>
+          </div>
+        </div>
+
+        <h2 class="heading">You made the right choice!</h2>
+        <p>
+          Let's get you started through the process of enrolling your child at
+          Shalom Science And Technology Academy <br /><br />We have ensured a
+          seamless and convienent process and you can enroll from anywhere at
+          anytime. Just follow these simple processes:
+        </p>
+
+        <ol class="info-list">
+          <li>Download the <span>entrance application form</span></li>
+          <li>
+            Provide the information required in the form and complete it by
+            attaching a passport photograph of candidate
+          </li>
+          <li>Make payment for the entrance form</li>
+          <li>
+            Send a scan copy of the completed form and proof of payment to
+            <span> thewinsschoolenugu@gmail.com</span> or Whatsapp
+            <span>+2348165543399</span>
+          </li>
+          <li>
+            We will send you upon confirmation a set of code and instructions to
+            unlock your entrance exam.
+          </li>
+        </ol>
+        <p>Goodluck as we expect you in our school</p>
+
+        <button class="Application-btn">Download Entrance Form</button>
+      </div>
+    </section>
+
+    <!-- start exam -->
+
+    <section class="exam">
+      <div class="exam-card">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h2>Online Entrance Examination</h2>
+        <p>
+          Take our entrance examination online at the convinenence of your home
+        </p>
+      </div>
+
+      <form class="exam-form" action="">
+        <input class="exam-input" type="text" placeholder="Reference Number" />
+        <button>Start Examination</button>
+      </form>
+    </section>
+
+    <!-- footer section -->
+
+    <section class="footer-section">
+      <div class="quicklinks">
+        <h2>information</h2>
+          
+       <div class="icon-text">
+        <i class="fa-solid fa-greater-than"></i>
+        <p> <a href="">About us</a></p>
+       </div>
+       <div class="icon-text">
+        <i class="fa-solid fa-greater-than"></i>
+        <p> <a href="">Admissions</a></p>
+       </div>
+       <div class="icon-text">
+        <i class="fa-solid fa-greater-than"></i>
+        <p> <a href="">Academic Calender</a></p>
+       </div>
+       <div class="icon-text">
+        <i class="fa-solid fa-greater-than"></i>
+        <p> <a href="">School Policies</a></p>
+       </div>
+       
+        </div>
+
+        <div class="quicklinks">
+          <h2>Helpful Links</h2>
+            
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">FAQs</a></p>
+         </div>
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">Forms</a></p>
+         </div>
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">News</a></p>
+         </div>
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">Portal</a></p>
+         </div>
+         
+          </div>
+
+          <div class="quicklinks">
+            <h2>Our Services</h2>
+              
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Counseling Services</a></p>
+           </div>
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Extracurricular Activities</a></p>
+           </div>
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Transport Services</a></p>
+           </div>
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Alumini Association</a></p>
+           </div>
+           
+            </div>
+
+
+        <div class="quicklinks">
+          <h2>Contact</h2>
+          <div class="contact-icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>#8 Rangers Avenue, Independence Layout,Enugu</p></div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-phone"></i>
+            <p>+2348165543399</p> </div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <p>info@thewinsschool.com.ng</p>
+          </div>
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <p>thewinsschoolenugu@gmail.com</p>
+          </div>
+          <div class="brands">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+        </div> 
+
+        <!-- <div class="quicklinks">
+          <form class="exam-form" action="">
+            <input class="exam-input" type="text" >
+            <button>Start Examination</button>
+          </form>
+        </div> -->
+      
+        <footer>
+         <i class="fa-regular fa-copyright"></i>
+         <p><a href="">The Wins School.</a></p>
+         <p class="rightsreserved">All Rights Reserved.</p>
+        </footer>
+    </section>
 
 
 
 
 
+    <script>
+      let menu = document.getElementById("nav-list-items");
+      menu.style.maxHeight = "0px";
 
-
-
-
-
-
-
-      <script>
-        let menu = document.getElementById("nav-list-items");
-        menu.style.maxHeight = "0px";
-  
-        function toggle() {
-          if (menu.style.maxHeight == "0px") {
-            menu.style.maxHeight = "300px";
-          } else {
-            menu.style.maxHeight = "0px";
-          }
+      function toggle() {
+        if (menu.style.maxHeight == "0px") {
+          menu.style.maxHeight = "300px";
+        } else {
+          menu.style.maxHeight = "0px";
         }
-      </script>
+      }
+    </script>
 
     <script
-        src="https://kit.fontawesome.com/9914104bee.js"
-        crossorigin="anonymous"
+      src="https://kit.fontawesome.com/9914104bee.js"
+      crossorigin="anonymous"
     ></script>
-
-</body>
+    <script src="scrollArrow.js"></script>
+    <script>
+      function toggleDropdown() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('active');
+    }
+    
+    </script>
+  </body>
 </html>

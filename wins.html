@@ -12,33 +12,41 @@
     <!-- nav -->
 
 
-    <nav>
+    <nav class="">
       <div class="imlo">
         <div class="logo">
           <img src="/winsschool/winschool.png" alt="lululogo" id="logo" />
+          <h1 class="logoh">THE WINS SCHOOL</h1>
         </div>
-        <h1 class="logoh">THE WINS SCHOOL</h1>
       </div>
 
       <div class="nav-list">
         <ul id="nav-list-items">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="wins.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">
+                  Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
+              </a>
+              <div class="dropdown-content">
+                  <a href="./student_login.html">Student Login</a>
+                  <a href="./staff_login.html">Staff Login</a>
+              </div>
+          </li>
             <li><a href="">News</a></li>
-            <li><a href="">Portal</a></li>
         </ul>
       </div>
 
       <div class="icon">
-        <i class="fa-solid fa-bars" onclick="toggle()"></i>
+        <i class="fa-solid fa-bars" onclick="toggle()"></i> 
       </div>
     </nav>
 
 
     <!-- carousel -->
 
-    <div class="carousel">
+    <div class="carousel ">
       <div class="carousel-images">
         <div class="carousel-slide">
           <img src="winsschool/IMG_3203.JPG" alt="Slide 1" />
@@ -52,7 +60,7 @@
             <button class="readmore readmore-first">
               Read More
             </button>
-            <a href="./enroll_now.html" target="_blank"> 
+            <a href="./enroll_now.html" > 
               <button onclick="" class="readmore ">
                     Enroll Now
               </button>
@@ -76,7 +84,7 @@
               <button class="readmore readmore-first">
               Read More
             </button>
-            <a href="./enroll_now.html" target="_blank"> 
+            <a href="./enroll_now.html" > 
               <button onclick="" class="readmore ">
                     Enroll Now
               </button>
@@ -98,7 +106,7 @@
           <button class="readmore readmore-first">
                 Read More
           </button >
-        <a href="./enroll_now.html" target="_blank"> 
+        <a href="./enroll_now.html" > 
           <button onclick="" class="readmore ">
                 Enroll Now
           </button>
@@ -113,7 +121,7 @@
 
     <!-- card -->
 
-    <div class="card">
+    <div class="card ">
       <div class="cards">
         <div class="card-icons">
           <i class="fa-solid fa-graduation-cap"></i>
@@ -176,12 +184,23 @@
           succeed in their chosen careers and make a positive impact in their
           communities.
         </p>
+        <p class="about-second-text">What we aim to achieve:</p>
+        <ul>
+          <li>
+            Excellence in Education</li>
+            <li>
+              Innovation and Accessibility</li>
+              <li>
+                Social morality and a high sense of ethics.</li>
+        </ul>
+        <button><a href="about.html">Read More</a>
+        </button>
       </div>
     </section>
 
 
     <!-- gallery -->
-    <section class="gallery">
+    <section class="gallery ">
 
       <div class="two">
         <h2>Our Facilities</h2>
@@ -204,7 +223,7 @@
       <div class="facilities">
         <div id="facilites-container">
           <img src="/winsschool/IMG_5886 (1).JPG" alt="" class="facilities-img">
-          <p>School Field</p>
+          <p>Classroom</p>
         </div>
       <div class="facilities">
         <div id="facilites-container">
@@ -221,9 +240,9 @@
 
     <!-- footer section -->
 
-    <section class="footer-section">
+    <section class="footer-section ">
       <div class="quicklinks">
-        <h2>Quick Links</h2>
+        <h2>information</h2>
           
        <div class="icon-text">
         <i class="fa-solid fa-greater-than"></i>
@@ -231,18 +250,62 @@
        </div>
        <div class="icon-text">
         <i class="fa-solid fa-greater-than"></i>
-        <p> <a href="">Contact Us</a></p>
+        <p> <a href="">Admissions</a></p>
        </div>
        <div class="icon-text">
         <i class="fa-solid fa-greater-than"></i>
-        <p> <a href="">News</a></p>
+        <p> <a href="">Academic Calender</a></p>
        </div>
        <div class="icon-text">
         <i class="fa-solid fa-greater-than"></i>
-        <p> <a href="">Portal</a></p>
+        <p> <a href="">School Policies</a></p>
        </div>
        
         </div>
+
+        <div class="quicklinks">
+          <h2>Helpful Links</h2>
+            
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">FAQs</a></p>
+         </div>
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">Forms</a></p>
+         </div>
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">News</a></p>
+         </div>
+         <div class="icon-text">
+          <i class="fa-solid fa-greater-than"></i>
+          <p> <a href="">Portal</a></p>
+         </div>
+         
+          </div>
+
+          <div class="quicklinks">
+            <h2>Our Services</h2>
+              
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Counseling Services</a></p>
+           </div>
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Extracurricular Activities</a></p>
+           </div>
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Transport Services</a></p>
+           </div>
+           <div class="icon-text">
+            <i class="fa-solid fa-greater-than"></i>
+            <p> <a href="">Alumini Association</a></p>
+           </div>
+           
+            </div>
 
 
         <div class="quicklinks">
@@ -267,7 +330,14 @@
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-linkedin-in"></i>
           </div>
-        </div>
+        </div> 
+
+        <!-- <div class="quicklinks">
+          <form class="exam-form" action="">
+            <input class="exam-input" type="text" >
+            <button>Start Examination</button>
+          </form>
+        </div> -->
       
         <footer>
          <i class="fa-regular fa-copyright"></i>
@@ -305,6 +375,20 @@
       src="https://kit.fontawesome.com/9914104bee.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="scrollArrow.js"></script>
+    <script src="bodyanimation.js">
+      
+    </script>
+
+<script>
+  function toggleDropdown() {
+const dropdown = document.querySelector('.dropdown');
+dropdown.classList.toggle('active');
+}
+
+</script>
+
    
   </body>
 </html>
