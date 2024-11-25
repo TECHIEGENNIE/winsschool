@@ -588,6 +588,11 @@ background-color: var(--orange);
   #logo{
       width: 5rem;
   }
+
+  .dropdown-content {
+    left: auto; /* Remove left alignment */
+    right: 5rem; /* Align dropdown to the right */
+}
    
 }
 

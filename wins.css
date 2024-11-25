@@ -94,6 +94,12 @@ nav{
     color: var(--orange);
 }
 
+.nav-link.active {
+    color: #fff; /* White text */
+    background-color: var(--orange); /* Orange background */
+    border-radius: 5px;
+}
+
 /* Dropdown Styles */
 .dropdown {
     position: relative;
@@ -790,6 +796,10 @@ background-color: var(--orange);
        width: 5rem;
    }
     
+   .dropdown-content {
+    left: auto; /* Remove left alignment */
+    right: 5rem; /* Align dropdown to the right */
+}
 }
 
 

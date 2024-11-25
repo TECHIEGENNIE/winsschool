@@ -201,12 +201,7 @@ nav{
 
 }
 
-.student-login{
-    margin-top: 2rem;
-    /* border: 1px solid black; */
-    /* box-shadow: rgba(0, 0, 0, 0.15); */
-    /* margin: 2rem; */
-}
+
 
 .student-login h3{
     font-size: 2rem;
@@ -217,6 +212,10 @@ nav{
 .form-heading {
     text-align: center;
 
+}
+
+.student-login ul{
+    margin-right: 2rem;
 }
 
 .student-login li{
@@ -246,9 +245,11 @@ nav{
 }
 
 .portal{
-    margin-bottom: 6rem;
+    margin-bottom: rem;
     box-shadow: 1px 2px 2px 2px rgba(32,32,124, 0.18);
     background-color: #fff;
+    border-radius: 1.7rem;
+    padding: 2rem 2rem;
 }
 
 .form-selection{
@@ -260,13 +261,15 @@ nav{
 
 .form-selection h3{
     font-size: 1.4rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
 }
 
 .student {
     color: var(--main);
     font-weight: 900;
-    border-bottom: 2px solid var(--orange);
+    font:  sans-serif;
+    /* font-size: 5.3rem; */
+    /* border-bottom: 2px solid var(--orange); */
 }
 
 
@@ -275,14 +278,14 @@ nav{
 .form-group input{
     width: 80%;
     padding: 1rem;
-    /* border-radius: 2rem; */
+    border-radius: 2rem;
     font-size: 1rem;
     font-family: sans-serif;
     margin-bottom: 1.5rem;
     /* box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2); */
-    /* background-color: rgb(243, 242, 242); */
+    background-color: rgb(243, 242, 242);
     border: none;
-    border-bottom: 1px solid var(--main);
+    /* border-bottom: 1px solid var(--main); */
     outline: none;
 }
 
@@ -387,6 +390,11 @@ background-color: var(--orange);
   #logo{
       width: 5rem;
   }
+
+  .dropdown-content {
+    left: auto; /* Remove left alignment */
+    right: 5rem; /* Align dropdown to the right */
+}
    
 }
 
