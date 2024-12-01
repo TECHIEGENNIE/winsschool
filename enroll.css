@@ -18,6 +18,11 @@ body{
     --orange: orange;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 nav{
     /* position: relative; */
     display: flex;
@@ -48,7 +53,7 @@ nav{
 
 .logoh{
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
     text-align: center;
 }
 
@@ -81,7 +86,7 @@ ul li a{
     text-decoration: none;
     font-size: 0.7rempx;
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
     font-weight: 700;
     transition: color 0.3s ease;
 
@@ -102,7 +107,7 @@ ul li a{
     text-decoration: none;
     font-size: 1rem;
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -155,6 +160,63 @@ ul li a{
     display: block;
 }
 
+/* Enroll Now Button */
+.enroll-now-desktop {
+    display: block;
+}
+
+.enroll-now-mobile {
+    display: none;
+}
+
+.enroll-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--main);
+    color: #fff !important;
+    font-family: "nunito";
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Sliding Orange Effect */
+.enroll-btn::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    animation: slide-color 3s infinite;
+    z-index: -1;
+}
+
+.enroll-btn:hover::before {
+    top: 0;
+    animation: none;
+}
+
+.enroll-btn:hover {
+    background-color: rgb(233, 92, 41);
+    color: #fff;
+}
+
+@keyframes slide-color {
+    0% {
+        top: 100%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 0;
+    }
+}
 
 
 
@@ -193,7 +255,7 @@ ul li a{
 .texts{
     position: relative;
     /* text-align: right; */
-    font-family: sans-serif;
+    font-family: "nunito";
     padding: 20px;
 }
 
@@ -208,7 +270,7 @@ ul li a{
     color: #fff;
     width: 90%;
     font-size: 1.2rem;
-    font-family: sans-serif;
+    font-family: "nunito";
 
 }
 
@@ -226,7 +288,7 @@ ul li a{
     margin-bottom: 1px;
     color: #fff;
     font-size: 1rem;
-    font-family: sans-serif;
+    font-family: "nunito";
     font-weight: 700;
 }
 
@@ -236,7 +298,7 @@ ul li a{
     border: none;
     font-size: 1rem;
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: "nunito";
 }
 
 /* admission */
@@ -276,19 +338,20 @@ ul li a{
  .two{
     color: var(--main);
     font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "nunito";
     margin-top: 2rem;
 
 }
 
 .admission{
     /* display: flex; */
-    margin-top: 4rem;
+    /* margin-top: 10rem 4rem; */
     padding: 2rem;
 }
 
 .admission img{
     width: 100%;
+    height: 100%;
 }
 
 .admission-card {
@@ -297,7 +360,7 @@ ul li a{
 
 .heading{
     font-size: 2rem;
-    font-family: sans-serif;
+    font-family: "nunito";
     color: rgb(25, 25, 43);
     margin-bottom: 1rem;
 
@@ -305,7 +368,7 @@ ul li a{
 
 .admission p, ol{
     font-size: 1.1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "nunito";
     color: rgb(73, 72, 72);
 }
 .admission span{
@@ -377,14 +440,14 @@ background-color: var(--orange);
 .exam-card h2{
     font-size: 1.5rem;
     margin-top: 1.5rem;
-    font-family: sans-serif;
+    font-family: "nunito";
 }
 
 .exam-card p{
     margin-top: 1.2rem;
     font-size: 1.2rem;
     padding-bottom: 1.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "nunito";
     color: var(--gray);
 }
 
@@ -394,24 +457,36 @@ background-color: var(--orange);
     width: 70%;
     height: 3rem;
     font-size: 1rem;
-    font-family: serif;
+    font-family: "nunito";
     font-size: 1.5rem;
-    border: none;
+    border-radius: 1rem;
+    outline: none;
+    padding-left: 1rem;
+    font-family: "nunito";
 }
 
 .exam-form{
-    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+
 }
 
 .exam-form button{
-    padding: 0.4rem;
+    padding: 0.7rem !important;
+    width: 4rem;
     background-color: var(--main);
     color: #fff;
-    position: absolute;
-    right: 4rem;
-    top: 0.08rem;
-    width: 20%;
-    
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    font-family: "nunito";
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -451,7 +526,7 @@ background-color: var(--orange);
     color: var(--orange);
     font-weight: 800;
     font-size: 0.8rem;
-    font-family: sans-serif;
+    font-family: "nunito";
 }
 
 
@@ -459,7 +534,7 @@ background-color: var(--orange);
 .icon-text a{
     text-decoration: none;
     color: #fff;
-    font-family: sans-serif;
+    font-family: "nunito";
     
 }
 
@@ -476,7 +551,7 @@ background-color: var(--orange);
 
 .contact-icon p{
     color: #fff;
-    font-family: sans-serif;
+    font-family: "nunito";
     
 }
 
@@ -588,9 +663,20 @@ footer a{
 
    ul li a {
        color:var(--main);
-       font-family: sans-serif;
+       font-family: "nunito";
        
    }
+
+    /* Hide Desktop Enroll Now */
+    .enroll-now-desktop {
+        display: none;
+    }
+
+    /* Show Mobile Enroll Now */
+    .enroll-now-mobile {
+        display: block;
+        color:#fff;
+    }
 
   .icon {
    display: block;
@@ -661,7 +747,7 @@ footer a{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2%;
-        margin: 0% 5%;
+        margin: 3rem 4rem;
         /* margin-top: 3%; */
     }
 

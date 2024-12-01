@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About-us</title>
     <link rel="stylesheet" href="about.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <body>
     <!-- nav -->
 
@@ -22,7 +24,16 @@
               <li><a href="wins.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contactus.html">Contact Us</a></li>
-              <li class="dropdown">
+              <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                  Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                </a>
+                <div class="dropdown-content">
+                  <a href="./student_login.html">Student Login</a>
+                  <a href="./staff_login.html">Staff Login</a>
+                </div>
+              </div>
+              <!-- <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">
                     Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
                 </a>
@@ -30,10 +41,18 @@
                     <a href="./student_login.html">Student Login</a>
                     <a href="./staff_login.html">Staff Login</a>
                 </div>
+            </li> -->
+              <!-- Enroll Now in Dropdown -->
+              <li class="enroll-now-mobile">
+                <a href="./enroll_now.html" class="enroll-btn">Enroll Now</a>
             </li>
-              <li><a href="">News</a></li>
           </ul>
         </div>
+
+          <!-- Enroll Now Button (Desktop Only) -->
+    <div class="enroll-now-desktop">
+      <a href="./enroll_now.html" class="enroll-btn">Enroll Now</a>
+  </div>
   
         <div class="icon">
           <i class="fa-solid fa-bars" onclick="toggle()"></i>
@@ -45,14 +64,35 @@
       <section class="about">
         <section class="image-card">
           <div class="texts">
-            <h2>Welcome To The Wins School</h2>
+            <h2>About The Wins School</h2>
             <p>
-              The Wins School is a home for innovation, academic excellence, and holistic growth. 
-              We provide students with the tools they need to excel in their studies, discover their 
-              passions, and become confident, compassionate leaders of tomorrow.  
+            .....In Pursuit of Excellence
             </p>
     
             
+        </section >
+
+        <section class="Administration"> 
+            <div class="admin">
+                <img src="/winsschool/Admin.jpg" alt="school-admin">
+            </div>
+            <div class="admin">
+
+              <div class="two">
+                <h2>From The Director of Academics</h2>
+                <div class="twospan">
+                  <span class="line"></span>
+                  <span class="line line2"></span>
+                </div>
+              </div>
+
+              <p>At The Wins School, we believe in fostering excellence, creativity, and resilience in every student. Established with a vision to inspire lifelong learning and empower the leaders of tomorrow, our school is committed to providing a dynamic and inclusive environment where every child can thrive.</p>
+              <p>Our curriculum combines academic rigor with innovative teaching methods, ensuring our students develop critical thinking, problem-solving, and collaboration skills. Beyond the classroom, we offer a range of extracurricular activities, from arts and sports to technology and community service, nurturing well-rounded individuals ready to make a positive impact on the world.</p>
+              <p>With a team of dedicated educators, state-of-the-art facilities, and a supportive community, The Wins School stands as a beacon of quality education and character development. Together, we win—not just in academics, but in values, creativity, and compassion.</p>
+              <p class="bold-para">Join us at The Wins School, where every child is a star, and every success is celebrated.</p>
+              <p class="name-para">Mr. Ude Peter</p>
+            </div>
+
         </section>
 
     
@@ -100,7 +140,7 @@
         <!-- Mission Section -->
         <div class="about-mission">
           <div class="vision-img">
-            <img src="/winsschool/IMG_4868.JPG" alt="">
+            <img src="/winsschool/IMG_5418.JPG" alt="">
           </div>
            <div class="content"><h2>Our Mission</h2>
             <p>

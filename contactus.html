@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact-us</title>
     <link rel="stylesheet" href="contactus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- nav -->
@@ -22,18 +27,26 @@
               <li><a href="wins.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="">Contact Us</a></li>
-              <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">
-                    Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
+              <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                  Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
                 </a>
                 <div class="dropdown-content">
-                    <a href="./student_login.html">Student Login</a>
-                    <a href="./staff_login.html">Staff Login</a>
+                  <a href="./student_login.html">Student Login</a>
+                  <a href="./staff_login.html">Staff Login</a>
                 </div>
+              </div>
+               <!-- Enroll Now in Dropdown -->
+               <li class="enroll-now-mobile">
+                <a href="./enroll_now.html" class="enroll-btn">Enroll Now</a>
             </li>
-              <li><a href="">News</a></li>
           </ul>
         </div>
+
+         <!-- Enroll Now Button (Desktop Only) -->
+    <div class="enroll-now-desktop">
+      <a href="./enroll_now.html" class="enroll-btn">Enroll Now</a>
+  </div>
   
         <div class="icon">
           <i class="fa-solid fa-bars" onclick="toggle()"></i>
@@ -81,26 +94,20 @@
                 </div>
             </div>
         
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
+
+            <!-- get in touch heading -->
+            <div class="get-in-touch">
+              <h2>Get in Touch</h2>
             </div>
+
+
+
+            <!-- Contact Form -->
+            <section id="contact-form">
         
             <!-- Map Section -->
             <div class="contact-map">
-                <h2>Visit Us</h2>
+              
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835250776958!2d7.519221214859327!3d6.438422995329342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10437f37e2c58b1f%3A0xd4d537af7bff526!2sIndependence%20Layout%2C%20Enugu!5e0!3m2!1sen!2sng!4v1634410113145!5m2!1sen!2sng" 
                     width="100%" 
@@ -109,6 +116,22 @@
                     allowfullscreen="" 
                     loading="lazy"></iframe>
             </div>
+
+            <div class="contact-form">
+              <form action="#" method="POST">
+                  <div class="form-group">
+                      <input type="text" name="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="email" name="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group">
+                      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                  </div>
+                  <button type="submit">Submit</button>
+              </form>
+          </div> 
+            </section>
         </section>
         
     
@@ -133,7 +156,7 @@
 
     <section class="footer-section">
       <div class="quicklinks">
-        <h2>information</h2>
+        <h2>Information</h2>
           
        <div class="icon-text">
         <i class="fa-solid fa-greater-than"></i>

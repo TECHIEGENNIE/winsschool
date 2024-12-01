@@ -5,11 +5,10 @@
     /* overflow-x: hidden; */
 }
 
-
-
 body{
     overflow-x: hidden;
-    background-image: url(/winsschool/IMG_5373.JPG);
+    background-color:rgb(235, 243, 248);
+    font-family: "nunito";
 }
 
 :root{
@@ -28,7 +27,7 @@ nav{
     padding-right: 20px ;
     height: 80px ;
     /* border-bottom: 1px solid var(--main); */
-    box-shadow: 0 0 1px 1px rgba(32,32,124, 0.18);
+    box-shadow: 0px 4px 6px  rgba(0, 0, 0, 0.1);
     cursor: pointer;
     /* overflow-y: hidden; */
    /* position: sticky;
@@ -44,14 +43,14 @@ nav{
 
 }
 
-
 .logoh{
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
     text-align: center;
 }
-
-
 
 .imlo{
     display: flex;
@@ -75,9 +74,9 @@ nav{
 
 #nav-list-items li a{
     text-decoration: none;
-    font-size: 0.7rempx;
+    font-size: 1.1rem;
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
     font-weight: 700;
     transition: color 0.3s ease;
 
@@ -97,7 +96,7 @@ nav{
     text-decoration: none;
     font-size: 1rem;
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -143,11 +142,67 @@ nav{
     z-index: 1500;
 }
 
-
-
 /* Show Dropdown When Active */
 .dropdown.active .dropdown-content {
     display: block;
+}
+
+/* Enroll Now Button */
+.enroll-now-desktop {
+    display: block;
+}
+
+.enroll-now-mobile {
+    display: none;
+}
+
+.enroll-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--orange);
+    color: #fff !important;
+    font-family: "nunito";
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Sliding Orange Effect */
+.enroll-btn::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    animation: slide-color 3s infinite;
+    z-index: -1;
+}
+
+.enroll-btn:hover::before {
+    top: 0;
+    animation: none;
+}
+
+.enroll-btn:hover {
+    background-color: rgb(233, 92, 41);
+    color: #fff;
+}
+
+@keyframes slide-color {
+    0% {
+        top: 100%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 .icon {
@@ -156,30 +211,27 @@ nav{
     display: none;
 }
  
-
-
-
 /* portal */
-
-
 .line{
     width: 35px;
     height: 4px;
     background-color:var(--orange);
     display: grid;
     margin-bottom: 5px;
+    position: relative;
 }
 
 .line2{
     width: 65px; 
 }
 
-
 .two{
     display: flex;
     margin-top: 5px;
+    margin-left: 1rem;
     margin-bottom: 1rem;
     align-items: center;
+    position: relative;
 }
 
 .two > .twospan {
@@ -190,13 +242,14 @@ nav{
 .about {
     margin-left: 5%;
     margin-right: 5%;
+    position: relative;
     
 }
 
  .two{
-    color: var(--main);
+    color: #fff;
     font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "nunito";
     margin-top: 2rem;
 
 }
@@ -205,7 +258,7 @@ nav{
 
 .student-login h3{
     font-size: 2rem;
-    font-family: serif;
+    font-family: "nunito";
     margin-bottom: 1rem;
 }
 
@@ -214,16 +267,31 @@ nav{
 
 }
 
+.student-login{
+    position: relative;
+}
+
 .student-login ul{
     margin-right: 2rem;
+    position: relative;
+    margin-left: 1.6rem;
 }
 
 .student-login li{
     font-size: 1.2rem;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     margin-bottom: 5px;
     line-height: 1.7rem;
+    position: relative;
+    color: #fff;
+    list-style-type: circle;
+
 }
+
+/* .icon-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
 
 .student-login img{
     width: 10rem;
@@ -238,6 +306,29 @@ nav{
     margin-bottom: 2rem;
 }
 
+.input-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto 1.5rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray);
+    cursor: pointer;
+}
+
 .portal form{
     /* box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5); */
     padding-bottom: 0.2rem;
@@ -245,12 +336,15 @@ nav{
 }
 
 .portal{
-    margin-bottom: rem;
-    box-shadow: 1px 2px 2px 2px rgba(32,32,124, 0.18);
+    /* margin-bottom: rem; */
+    /* box-shadow: 1px 2px 2px 2px rgba(32,32,124, 0.18); */
     background-color: #fff;
-    border-radius: 1.7rem;
-    padding: 2rem 2rem;
+    /* border-radius: 1.7rem; */
+    /* padding: 2rem 2rem; */
+    margin-top: 0.2rem;
 }
+
+
 
 .form-selection{
     display: flex;
@@ -261,32 +355,104 @@ nav{
 
 .form-selection h3{
     font-size: 1.4rem;
-    font-family: sans-serif;
+    font-family: "nunito";
 }
 
 .student {
     color: var(--main);
     font-weight: 900;
-    font:  sans-serif;
+     font-family: "nunito";
     /* font-size: 5.3rem; */
     /* border-bottom: 2px solid var(--orange); */
 }
 
+.image-card{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.image-card::before{
+    content: '';
+    background-image: url(/winsschool/IMG_5886.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    filter: brightness(0.5);
+
+}
+
+/* .texts{
+    position: relative;
+} */
 
 
+.application{
+    /* background-image: url(/winsschool/IMG_5374.JPG); */
+    background-repeat: no-repeat;
+    background-size: cover ;
 
-.form-group input{
+}
+
+/* .form-group input{
     width: 80%;
     padding: 1rem;
     border-radius: 2rem;
     font-size: 1rem;
     font-family: sans-serif;
     margin-bottom: 1.5rem;
-    /* box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2); */
     background-color: rgb(243, 242, 242);
     border: none;
-    /* border-bottom: 1px solid var(--main); */
     outline: none;
+} */
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: "nunito";
+    background-color: rgb(243, 242, 242);
+    border: 2px solid transparent;
+    outline: none;
+    transition: border-color 0.3s, padding-top 0.3s;
+}
+
+.form-group input:focus {
+    border-color: rgb(32, 32, 124);
+    padding-top: 1.5rem;
+}
+
+.form-group label {
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--gray);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    color: rgb(32, 32, 124);
+}
+
+.form-group input::placeholder {
+    color: transparent;
 }
 
 .form-group button{
@@ -304,9 +470,7 @@ nav{
 
 }
 
-
 /* scroll Arrow */
-
 .back-to-top{
     position: fixed;
     bottom: 2rem;
@@ -341,6 +505,21 @@ background-color: var(--orange);
 
 
 
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+
+
+
 
 
 
@@ -353,8 +532,6 @@ background-color: var(--orange);
 
 
 /* mediaqueries */
-
-
 @media only screen and (max-width: 900px){
     #nav-list-items {
        position: absolute;
@@ -378,9 +555,20 @@ background-color: var(--orange);
 
    #nav-list-items li a {
        color:var(--main);
-       font-family: sans-serif;
+       font-family: "nunito";
        
    }
+
+    /* Hide Desktop Enroll Now */
+    .enroll-now-desktop {
+        display: none;
+    }
+
+    /* Show Mobile Enroll Now */
+    .enroll-now-mobile {
+        display: block;
+        color:#fff;
+    }
 
   .icon {
    display: block;
@@ -399,10 +587,7 @@ background-color: var(--orange);
 }
 
 
-@media only screen and (min-width: 700px){
-
-   
-       
+@media only screen and (min-width: 700px){  
        
        #logo{
            /* width: 20vh; */
@@ -418,13 +603,17 @@ background-color: var(--orange);
        .portal {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 2rem 6rem;
+        /* margin: 1rem 3rem; */
+        /* padding: 2rem 5rem; */
        }
+
+       .form{
+        margin-top: 5rem ;
+    }
+    
 
      
 }
-
-
 
 @media only screen and (min-width: 968px){
    
@@ -438,3 +627,11 @@ background-color: var(--orange);
     }
 
 }
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .modal-content {
+      width: 90%;
+      padding: 15px;
+    }
+  }

@@ -5,10 +5,16 @@
     /* overflow-x: hidden; */
 }
 
+/* h2{
+    font-family: "poppins", sans-serif;
+} */
+
 
 
 body{
     overflow-x: hidden;
+    font-family: "nunito";
+    font-weight: 500; 
 }
 
 :root{
@@ -52,7 +58,8 @@ nav{
 
 .logoh{
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
+    font-weight: 800;
     text-align: center;
 }
 
@@ -68,6 +75,41 @@ nav{
     
   
 }
+
+/* Base styles for dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Dropdown content links */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Show dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Optional: Hover effect for dropdown links */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
 
 #nav-list-items {
     display: flex;
@@ -85,7 +127,7 @@ nav{
     text-decoration: none;
     font-size: 0.7rempx;
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -110,7 +152,7 @@ nav{
     text-decoration: none;
     font-size: 1rem;
     color: var(--main);
-    font-family: sans-serif;
+    font-family: "nunito";
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -151,6 +193,8 @@ nav{
     display: block;
     padding: 10px 15px;
     font-size: 1rem;
+    font-family: "nunito";
+    font-weight: 400;
     color: var(--main);
     transition: background-color 0.3s ease, color 0.3s ease;
     z-index: 1500;
@@ -163,6 +207,64 @@ nav{
     display: block;
 }
 
+
+/* Enroll Now Button */
+.enroll-now-desktop {
+    display: block;
+}
+
+.enroll-now-mobile {
+    display: none;
+}
+
+.enroll-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(99, 99, 179);;
+    color: #fff !important;
+    font-family: "nunito";
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Sliding Orange Effect */
+.enroll-btn::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    animation: slide-color 3s infinite;
+    z-index: -1;
+}
+
+.enroll-btn:hover::before {
+    top: 0;
+    animation: none;
+}
+
+.enroll-btn:hover {
+    background-color: rgb(233, 92, 41);
+    color: #fff;
+}
+
+@keyframes slide-color {
+    0% {
+        top: 100%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 0;
+    }
+}
 
 
 .icon {
@@ -234,14 +336,16 @@ nav{
 
 .carousel-caption h2{
     font-size: 2rem;
-    font-family: sans-serif;
+    font-family: "nunito";
+    font-weight: 800;
     margin-bottom: 1rem;
     color: rgb(182, 182, 230);
 }
 
 .carousel-caption p {
     font-size: 1.2rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "nunito";
+    font-weight: 400;
 }
 
 .carousel-button {
@@ -267,7 +371,7 @@ nav{
 .readmore{
     padding: 13px;
     font-size: 1rem;
-    font-family: sans-serif;
+    font-family: "nunito";
     border: none;
     font-weight: 600;
     cursor: pointer;
@@ -282,8 +386,9 @@ nav{
 
 
 .readmore-first{
-    background-color: var(--orange);
+    background-color: rgb(99, 99, 179);
     color: #fff;
+    text-decoration: none;
 }
 
 .prev {
@@ -319,9 +424,22 @@ nav{
 }
 .cards:hover {
     background-color: var(--orange);
-    color: #fff !important;
+    /* color: #fff !important; */
     transform: rotate(-4deg);
 }
+
+.cards:hover p{
+    color: #fff;
+}
+
+.cards:hover i{
+    color: #fff;
+}
+
+.cards:hover h2{
+    color: #fff;
+}
+
 
 /* .card:hover ~ .cards{
     z-index: 1;
@@ -333,7 +451,7 @@ nav{
 } */
 
 .card-icons {
-    color: var(--main);
+    color: var(--orange);
     font-size: 36px;
     /* font-size: 3rem; */
     padding-top: 1.5rem; 
@@ -347,15 +465,15 @@ nav{
     font-size: 1.5rem;
     margin-top: 1.5rem;
     font-family: sans-serif;
-    /* color: var(--gray); */
+    color: var(--main);
 }
 
 .cards p {
     margin-top: 1.2rem;
     font-size: 1.2rem;
     padding-bottom: 1.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--gray);
+    font-family: "nunito";
+    color: black;
 }
 
 /* .line::after{
@@ -413,12 +531,14 @@ nav{
 .about h2{
     color: var(--main);
     font-size: 1.7rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "nunito";
+    font-weight: 800;
 }
 
 .about p{
+    font-family: "nunito";
+    font-weight: 400;
     font-size: 1.2rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .about ul{
@@ -428,14 +548,18 @@ nav{
     margin-bottom: 0.8rem;
 }
 .about li{
+    font-family: "nunito";
+    font-weight: 400;
     line-height: 1.7rem;
+
 
 
 }
 .about button{
     padding: 0.6rem;
     background-color: var(--orange);
-    font-family: sans-serif;
+    font-family: "nunito";
+    font-weight: 800;
     font-size: 1.2rem;
     border: none;
 }
@@ -443,12 +567,16 @@ nav{
 .about a{
     text-decoration: none;
     color: #fff;
+    font-family: "nunito";
 }
 
 .about-second-text{
     margin-top: 0.8rem ;
     color: var(--main);
     font-weight: 700;
+    font-family: "nunito";
+    font-size: 1.3rem;
+
 }
 
 /* gallery */
@@ -483,51 +611,57 @@ nav{
 
 .gallery .two h2{
     font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "nunito";
     /* text-align: center; */
+    margin-left: 3rem;
     
 }
 
-.facilities {
-    display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 16px; /* Space between items */
-    margin: 0 auto;
+/* Flexbox Gallery */
+.gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
     padding: 10px;
-    
 }
 
-#facilites-container {
-    position: relative; /* Create positioning context */
-    overflow: hidden; /* Hide overflow for clean edges */
-    border: 2px solid #ddd; /* Optional: Adds a border to images */
-    border-radius: 8px; /* Optional: Rounded corners */
-    z-index: -1;
+.gallery-item {
+    flex: 1 1 calc(50% - 50px); /* Each image takes 25% of the width minus the gap */
+    max-width: 600px; /* Limit the maximum width for better scaling */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.facilities-img {
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-img {
     width: 100%;
-    height: 100%;
-    display: block; 
-    object-fit: cover;
-    
+    height: auto; /* Maintain the natural aspect ratio */
+    border-radius: 8px;
 }
 
-.facilities p {
+.gallery-item p {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
     color: #fff;
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    padding: 8px 0;
+    font-family: "nunito";
+    font-size: 1rem;
     font-weight: bold;
-    border-radius: 4px; /* Optional: Rounded corners */
-    max-width: 80%; /* Ensure text doesn't overflow */
-    word-wrap: break-word;
     text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
-
 
 
 /* .facilities-img{
@@ -591,7 +725,7 @@ nav{
     color: var(--orange);
     font-weight: 800;
     font-size: 0.8rem;
-    font-family: sans-serif;
+    font-family: "nunito";
 }
 
 
@@ -618,7 +752,7 @@ nav{
 
 .contact-icon p{
     color: #fff;
-    font-family: sans-serif;
+    font-family: "nunito";
     
 }
 
@@ -669,7 +803,8 @@ footer{
     display: flex;
     margin-top: 3rem;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-family: nunito;
     padding-bottom: 2rem;
     align-items: center;
 }
@@ -682,7 +817,7 @@ footer a{
 
 
 .rightsreserved, footer i{
-    color: grey;
+    color: rgb(184, 180, 180);
 }
 
 
@@ -787,6 +922,17 @@ background-color: var(--orange);
         
     }
 
+     /* Hide Desktop Enroll Now */
+     .enroll-now-desktop {
+        display: none;
+    }
+
+    /* Show Mobile Enroll Now */
+    .enroll-now-mobile {
+        display: block;
+        color:#fff;
+    }
+
    .icon {
     display: block;
    }  
@@ -880,5 +1026,17 @@ background-color: var(--orange);
     }
     
 
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 16px); /* 2 columns on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Single column on very small screens */
+    }
 }
 

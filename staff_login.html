@@ -1,126 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student-Portal</title>
-    <link rel="stylesheet" href="student_login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="student_login.css" />
+    <link rel="stylesheet" href="wins.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
     <!-- nav -->
 
     <nav>
-        <div class="imlo">
-          <div class="logo">
-            <img src="/winsschool/winschool.png" alt="school-logo" id="logo" />
-            <h1 class="logoh">THE WINS SCHOOL</h1>
+      <div class="imlo">
+        <div class="logo">
+          <img src="/winsschool/winschool.png" alt="school-logo" id="logo" />
+          <h1 class="logoh">THE WINS SCHOOL</h1>
+        </div>
+      </div>
+
+    
+      <div class="nav-list">
+        <ul id="nav-list-items">
+          <li><a href="wins.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li class="dropdown">
+            <a
+              href="javascript:void(0)"
+              class="dropbtn"
+              onclick="toggleDropdown()"
+            >
+              Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="./student_login.html" >Student Login</a>
+              <a href="./staff_login.html">Staff Login</a>
+            </div>
+          </li>
+           <!-- Enroll Now in Dropdown -->
+           <li class="enroll-now-mobile">
+            <a href="./enroll_now.html" class="enroll-btn">Enroll Now</a>
+        </li>
+        </ul>
+      </div>
+
+       <!-- Enroll Now Button (Desktop Only) -->
+    <div class="enroll-now-desktop">
+      <a href="./enroll_now.html" class="enroll-btn">Enroll Now</a>
+  </div>
+
+      <div class="icon">
+        <i class="fa-solid fa-bars" onclick="toggle()"></i>
+      </div>
+    </nav>
+    <!--   student portal -->
+
+    <section class="portal">
+      <div class="student-login image-card ">
+        <div class="texts">
+        <div class="two">
+          <h2>ACCESS OUR PORTAL</h2>
+          <div class="twospan">
+            <span class="line"></span>
+            <span class="line line2"></span>
           </div>
         </div>
-  
-        <div class="nav-list">
-          <ul id="nav-list-items">
-              <li><a href="wins.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contactus.html">Contact Us</a></li>
-              <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">
-                    Portal <i class="fa-solid fa-caret-down dropdown-icon"></i>
-                </a>
-                <div class="dropdown-content">
-                    <a href="./student_login.html">Student Login</a>
-                    <a href="./staff_login.html">Staff Login</a>
-                </div>
-            </li>
-              <li><a href="">News</a></li>
-          </ul>
+        <!-- <h3>Steps to follow</h3> -->
+        <ul>
+          <li>Enter your Username in the form provided.</li>
+          <li >Enter password appropriately in the field provided</li>
+          <li >
+            If the Username and password are correct you will be
+            granted access to the portal.
+          </li>
+          <li >
+            Once logged in, you will see a menu by your left listing services
+            provided by the portal.
+          </li>
+          <li >
+            Click any of the menu like ' Profile', 'Result', 'Library' to have
+            access to the service.
+          </li>
+          <li>Remember to log out once you are done with the portal</li>
+        </ul>
+      </div>
+      </div>
+      <form action="" class="student-login  form">
+        <!-- <img src="/winsschool/winschool.png" alt="" /> -->
+        <div class="form-selection">
+          <h3 class="student">Staff Login</h3>
         </div>
-  
-        <div class="icon">
-          <i class="fa-solid fa-bars" onclick="toggle()"></i>
+        <div class="form-group">
+          <div class="input-container">
+            <i class="fas fa-user input-icon"></i>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Registration Number"
+            />
+            <label for="username">Username</label>
+          </div>
+          <div class="input-container">
+            <i class="fas fa-lock input-icon"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
+            <label for="password">Password</label>
+            <i class="fas fa-eye-slash toggle-password" id="togglePassword"></i>
+          </div>
+          <button>Login</button>
         </div>
-      </nav>
-
-      <!--   student portal -->
-
-      <section class="portal">
-        <form action="" class="student-login">
-            <img src="/winsschool/winschool.png" alt="">
-          <div class="form-selection">
-            <h3 class="student">Staff Login</h3>
-            <!-- <h3 class="staff">Staff Login</h3> -->
-          </div> 
-            <div class="form-group">
-                
-                <input type="text" id="username" name="username" placeholder="Username"> <br>
-               
-                <input type="password" id="username" name="password" placeholder="Password">
-
-                <button>Login</button>
-            </div>
-        </form>
-        <div class="student-login">
-            <div class="two">
-                <h2>ACCESS OUR PORTAL</h2>
-                <div class="twospan">
-                  <span class="line"></span>
-                  <span class="line line2"></span>
-                </div>
-              </div>
-              <h3>Steps to follow</h3>
-            <ul>
-              <li>Enter your Username in the form provided.
-             </li>
-              <li>Enter password appropriately in the field provided
-              </li>
-              <li>If the Username and password are correct you will be granted access to the portal.    
-              </li>
-              <li>Once logged in, you will see a menu by your left listing services provided by the portal.
-              </li>
-              <li>Click any of the menu like ' Profile', 'Result', 'e-Learning' to have access to the service.
-              </li>
-              <li>Remember to log out once you are done with the portal
-              </li>
-            </ul>
-
-        </div>
-
-      </section>
-
-
-
+      </form>
+    </section>
 
     <a href="#" class="back-to-top">
       <i class="fa-solid fa-arrow-up"></i>
     </a>
 
+    <script>
+      let menu = document.getElementById("nav-list-items");
+      menu.style.maxHeight = "0px";
 
-
-
-      <script>
-        let menu = document.getElementById("nav-list-items");
-        menu.style.maxHeight = "0px";
-  
-        function toggle() {
-          if (menu.style.maxHeight == "0px") {
-            menu.style.maxHeight = "300px";
-          } else {
-            menu.style.maxHeight = "0px";
-          }
+      function toggle() {
+        if (menu.style.maxHeight == "0px") {
+          menu.style.maxHeight = "300px";
+        } else {
+          menu.style.maxHeight = "0px";
         }
-      </script>
+      }
+
+      // Toggle password visibility
+      const togglePassword = document.getElementById("togglePassword");
+      const password = document.getElementById("password");
+
+      togglePassword.addEventListener("click", function () {
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
 
     <script
-        src="https://kit.fontawesome.com/9914104bee.js"
-        crossorigin="anonymous"
+      src="https://kit.fontawesome.com/9914104bee.js"
+      crossorigin="anonymous"
     ></script>
     <script src="scrollArrow.js"></script>
     <script>
       function toggleDropdown() {
-    const dropdown = document.querySelector('.dropdown');
-    dropdown.classList.toggle('active');
-    }
-    
+        const dropdown = document.querySelector(".dropdown");
+        dropdown.classList.toggle("active");
+      }
     </script>
-
-</body>
+    
+  </body>
 </html>
